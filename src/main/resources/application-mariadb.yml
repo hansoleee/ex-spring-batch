@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/ex_spring_batch?serverTimezone=Asia/Seoul
+    username: tester
+    password: tester
+  jpa:
+    hibernate:
+      ddl-auto: update
+      use-new-id-generator-mappings: true
+    properties:
+      hibernate:
+        show_sql: true
+  batch:
+    job:
+      names: ${job.name:NONE}
+
+logging.level:
+  root: info
+  com.hansoleeee.exspringbatch: debug
